@@ -1,8 +1,8 @@
 import { Router } from "express";
+import { gSheetsController } from "../controllers/gSheetsController.js";
 
 export const router = Router();
 
-router.put("/:appName/:tableName/:id", (req, res) => {
+router.put("/:appName/:tableName/:id", gSheetsController.update
   // #swagger.tags = ['tables']
-  res.json({ put: { appName: req.params.appName, tableName: req.params.tableName, id: req.params.id } })
-});
+);

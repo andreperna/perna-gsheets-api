@@ -1,12 +1,8 @@
 import { Router } from "express";
+import { gDriveController, gSheetsController } from "../controllers/controllers.js";
 
 export const router = Router();
 
-router.get("/", (req, res) => {
-  // #swagger.tags = ['Users']
-
-  res.json({ get: req.url })
-});
 
 router.get("/status", (req, res) => {
   // #swagger.tags = ['status']
@@ -14,27 +10,22 @@ router.get("/status", (req, res) => {
   res.json({ status: "ok" })
 });
 
-router.get("/apps", (req, res) => {
+router.get("/", gDriveController.findAll
   // #swagger.tags = ['apps']
   // #swagger.summary = 'return list of apps'
-  res.json({ get: req.url })
-  
-});
+);
 
-router.get("/:appName", (req, res) => {
+router.get("/:appName", gDriveController.findOne
   // #swagger.tags = ['apps']
   // #swagger.summary = 'return list of tables for this app'
-  res.json({ appName: req.params.appName })
-});
+);
 
-router.get("/:appName/:tableName", (req, res) => {
+router.get("/:appName/:tableName", gSheetsController.findAll
   // #swagger.tags = ['tables']
     // #swagger.summary = 'return data content of table'
-  res.json({ appName: req.params.appName, tableName: req.params.tableName })
-});
+ );
 
-router.get("/:appName/:tableName/:id", (req, res) => {
+router.get("/:appName/:tableName/:id", gSheetsController.findOne
   // #swagger.tags = ['tables']
     // #swagger.summary = 'return content of id'
-  res.json({ appName: req.params.appName, tableName: req.params.tableName, id: req.params.id })
-});
+);

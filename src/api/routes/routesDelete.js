@@ -1,8 +1,8 @@
 import { Router } from "express";
+import { gSheetsController } from "../controllers/gSheetsController.js";
 
 export const router = Router();
 
-router.delete("/:appName/:tableName/:id", (req, res) => {
+router.delete("/:appName/:tableName/:id", gSheetsController.remove
   // #swagger.tags = ['tables']
-  res.json({ delete: { appName: req.params.appName, tableName: req.params.tableName } })
-});
+);

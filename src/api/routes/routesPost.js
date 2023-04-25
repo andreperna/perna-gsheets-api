@@ -1,8 +1,8 @@
 import { Router } from "express";
+import { gSheetsController } from "../controllers/gSheetsController.js";
 
 export const router = Router();
 
-router.post("/:appName/:tableName", (req, res) => {
+router.post("/:appName/:tableName", gSheetsController.create
   // #swagger.tags = ['tables']
-  res.json({ post: { appName: req.params.appName, tableName: req.params.tableName } })
-});
+);
