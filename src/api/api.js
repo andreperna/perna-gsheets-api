@@ -6,6 +6,10 @@ import { router as routesIndex } from "./routes/routes.js";
 
 export const api = express();
 
+api.use(express.json())
+api.use(express.urlencoded({extended: true}))
+
+
 
 api.use("/doc", swaggerMiddleware)
 api.use(routesIndex);
