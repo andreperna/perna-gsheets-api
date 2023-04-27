@@ -26,7 +26,7 @@
         }
       }
     },
-    "/": {
+    "/apps": {
       "get": {
         "tags": [
           "apps"
@@ -41,7 +41,7 @@
         }
       }
     },
-    "/{appName}": {
+    "/apps/{appName}": {
       "get": {
         "tags": [
           "apps"
@@ -63,7 +63,7 @@
         }
       }
     },
-    "/{appName}/{tableName}": {
+    "/apps/{appName}/{tableName}": {
       "get": {
         "tags": [
           "tables"
@@ -94,6 +94,7 @@
         "tags": [
           "tables"
         ],
+        "summary": "create one item",
         "description": "",
         "parameters": [
           {
@@ -116,12 +117,12 @@
         }
       }
     },
-    "/{appName}/{tableName}/{id}": {
+    "/apps/{appName}/{tableName}/{id}": {
       "get": {
         "tags": [
           "tables"
         ],
-        "summary": "return content of id",
+        "summary": "return one item by id",
         "description": "",
         "parameters": [
           {
@@ -153,6 +154,7 @@
         "tags": [
           "tables"
         ],
+        "summary": "update one item by id",
         "description": "",
         "parameters": [
           {
@@ -184,6 +186,7 @@
         "tags": [
           "tables"
         ],
+        "summary": "delete one item by id",
         "description": "",
         "parameters": [
           {

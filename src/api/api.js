@@ -11,5 +11,5 @@ api.use(express.urlencoded({extended: true}))
 
 
 
-api.use("/doc", swaggerMiddleware)
 api.use(routesIndex);
+api.use("/", swaggerMiddleware)
