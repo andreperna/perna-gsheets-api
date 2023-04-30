@@ -1,8 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Description",
+    "title": "GSheets API Back-End",
+    "contact": {
+      "email": "andreperna@gmail.com"
+    },
+    "description": "Use your Google Sheets as Back-End",
     "version": "1.0.0"
   },
   "host": "localhost:3000",
@@ -123,10 +126,6 @@
                 "age": {
                   "type": "number",
                   "example": 29
-                },
-                "about": {
-                  "type": "string",
-                  "example": ""
                 }
               },
               "required": [
@@ -200,6 +199,28 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "objToUpdate",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "Jhon Doe"
+                },
+                "age": {
+                  "type": "number",
+                  "example": 29
+                }
+              },
+              "required": [
+                "name",
+                "age"
+              ]
+            }
           }
         ],
         "responses": {

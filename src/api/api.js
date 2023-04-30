@@ -6,6 +6,7 @@ import { router as routesIndex } from "./routes/routes.js";
 
 export const api = express();
 
+api.set ("json spaces", 2)
 api.use(express.json())
 api.use(express.urlencoded({extended: true}))
 

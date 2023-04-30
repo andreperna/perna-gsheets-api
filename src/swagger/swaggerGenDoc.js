@@ -2,8 +2,9 @@ import swaggerAutogen from "swagger-autogen";
 
 const doc = {
   info: {
-    title: "My API",
-    description: "Description",
+    title: "GSheets API Back-End",
+    contact: { email: "andreperna@gmail.com" },
+    description: "Use your Google Sheets as Back-End",
   },
   // host: "localhost:3000",
   // schemes: ["http"],

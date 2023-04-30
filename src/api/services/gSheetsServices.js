@@ -7,7 +7,7 @@ async function create(folderName, sheetName, objToAppend) {
 
 async function findAll(folderName, sheetName) {
     const spreadsheetId = await gDriveFunctions.getSheetId(folderName, sheetName)
-    return await gSheetFunctions.getValuesNotNull(spreadsheetId)
+    return { data: await gSheetFunctions.getValuesNotNull(spreadsheetId) }
 }
 
 async function findOne(folderName, sheetName, id) {
