@@ -27,7 +27,7 @@ async function update(req, res) {
     const id = req.params.id
     const objToUpdate = req.boby
     const result = await gSheetsServices.update(folderName, sheetName, id, objToUpdate)
-    res.send(result)
+    res.send(JSON.stringify(req.body))
 }
 
 async function remove(req, res) {
