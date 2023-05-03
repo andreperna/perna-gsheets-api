@@ -8,7 +8,7 @@
     "description": "Use your Google Sheets as Back-End",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "oracle-vm2.freeddns.org:3000",
   "basePath": "/",
   "schemes": [
     "http"

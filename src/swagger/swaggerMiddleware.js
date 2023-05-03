@@ -6,6 +6,7 @@ const swaggerDoc = JSON.parse(fs.readFileSync("src/swagger/swagger-output.json")
 
 export const swaggerMiddleware = [
   (req, res, next)=>{
+    // console.log(swaggerDoc.host)
     swaggerDoc.host = req.get('host')
     next()
   },
