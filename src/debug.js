@@ -10,7 +10,7 @@ import { gDriveServices, gSheetsServices } from "./api/services/services.js"
 // result = await gSheetsServices.findOne("app2", "tbl_users", 8)
 
 // result = await gSheetsServices.create("app2", "tbl_users",{nome: "sssss", idade: 55})
-result = await gSheetsServices.update("app2", "tbl_users", 21, { name: "sss", age: 55 })
+// result = await gSheetsServices.update("app2", "tbl_users", 21, { name: "dddd", age: 55 })
 
 
 import { gSheetsController } from "./api/controllers/gSheetsController.js"
@@ -26,7 +26,7 @@ const req = {
     }
 }
 
-// result = await gSheetsController.update(req)
+result = await gSheetsController.update(req)
 
 // result = req.body
 

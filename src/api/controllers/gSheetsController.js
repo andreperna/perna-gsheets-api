@@ -3,7 +3,7 @@ import { gSheetsServices } from "../services/services.js"
 async function create(req, res) {
     const folderName = req.params.appName
     const sheetName = req.params.tableName
-    const objToAppend = req.body
+    const objToAppend = Object(req.body)
     const result = await gSheetsServices.create(folderName, sheetName, objToAppend)
     res.send(result)
 }
@@ -25,9 +25,9 @@ async function update(req, res) {
     const folderName = req.params.appName
     const sheetName = req.params.tableName
     const id = req.params.id
-    const objToUpdate = req.boby
+    const objToUpdate = Object(req.body)
     const result = await gSheetsServices.update(folderName, sheetName, id, objToUpdate)
-    res.send(JSON.stringify(req.body))
+    res.send(result)
 }
 
 async function remove(req, res) {
